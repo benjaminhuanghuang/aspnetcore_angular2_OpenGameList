@@ -3,7 +3,7 @@
 .DS_Store
 **/bower_components/
 **/uploads/
-**/node_components/
+**/node_modules/
 
 # User-specific files
 *.suo
