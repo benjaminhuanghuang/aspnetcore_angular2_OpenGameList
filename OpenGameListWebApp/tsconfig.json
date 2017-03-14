@@ -11,7 +11,7 @@
     "lib": [
       "es2017", "dom"
     ],
-    "sourceRoot": "src/app",
+    "sourceRoot": "Scripts/app",
     "outDir": "wwwroot/app"
   },
   "awesomeTypescriptLoaderOptions": {

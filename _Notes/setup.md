@@ -57,6 +57,8 @@
         "gulp-uglify": "^2.0.0",
     }
     
+    add gulpfile.js
+    In task "app", 
 ## Bower
 
 
