@@ -10,7 +10,9 @@
     "allowJs": true,
     "lib": [
       "es2017", "dom"
-    ]
+    ],
+    "sourceRoot": "src/app",
+    "outDir": "wwwroot/app"
   },
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true
