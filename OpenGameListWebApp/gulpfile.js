@@ -39,7 +39,7 @@ gulp.task('app',['app_clean'], function () {
         .pipe(gp_sourcemaps.init())
         .pipe(gp_typescript(require('./tsconfig.json').compilerOptions))
         .pipe(gp_uglify({
-            mangle: false
+            mangle: false   // set false to skip mangling names.
         }))
         .pipe(gp_sourcemaps.write('/'))
         .pipe(gulp.dest(destPaths.app));

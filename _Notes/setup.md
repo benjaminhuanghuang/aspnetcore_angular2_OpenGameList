@@ -25,31 +25,11 @@
 
 ## Bower
     Angular 2 team is pushing their code using NPM rather than Bower, we won't be using it in our project.
-    
-## TypeScript
-    npm install -g typescript
-    npm install --save-dev typing
 
-    Add tsconfig.json under root folder
-    
-    
-    create /tsconfig.json
-    {
-        "compilerOptions": {
-            "target": "es5",
-            "module": "commonjs",
-            "inlineSourceMap": true,
-            "inlineSources": true,
-            "sourceRoot": "src/app",
-            "outDir": "wwwroot/app"
-        }
-    }  
-    run $tsc -watch
-    tsc will transfer /src/app/*.ts to /wwwroot/app/*.js
-    All client side code should be saved under /wwwroot folder
-    The typescript code does not run at client side directly, so we put it in /src folder
+
      
 ## Gulp
+    ### Install Gulp package
     Add dependency into package.json
     "devDependencies": {
         "gulp": "^3.9.1",
@@ -59,6 +39,12 @@
         "gulp-typescript": "^2.13.6",
         "gulp-uglify": "^2.0.0",
     }
+    gulp-clean: This deletes the contents of the destination folders
+    gulp-concat: This merges multiple files into one
+    gulp-sourcemaps: This generates the Source Maps
+    gulp-typescript: This compiles TypeScript files into JS
+    gulp-uglify: This minifies JavaScript files
     
-    add gulpfile.js
+    ### Config gulp 
+    Add Gulp config file gulpfile.js 
     In task "app", gulp-typescipt complies the ts file to js
