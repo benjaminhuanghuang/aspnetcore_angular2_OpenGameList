@@ -22,7 +22,10 @@
     $ npm install -g yo generator-aspnet 
     $ yo aspnet
     $ yo aspnet:MvcController Home
- 
+
+## Bower
+    Angular 2 team is pushing their code using NPM rather than Bower, we won't be using it in our project.
+    
 ## TypeScript
     npm install -g typescript
     npm install --save-dev typing
