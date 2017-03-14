@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "system",
+    "module": "commonjs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
@@ -10,12 +10,13 @@
     "noImplicitAny": false,
     "noEmitOnError": false,
     "removeComments": false,
-    "sourceRoot": "Scripts/app",
-    "outDir": "wwwroot/app"
+    "lib": [ "es2015", "dom" ]
   },
   "exclude": [
     "node_modules",
     "dist",
-    "wwwroot"
+    "wwwroot",
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }
