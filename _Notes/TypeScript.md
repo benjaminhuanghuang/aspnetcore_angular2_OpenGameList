@@ -9,15 +9,26 @@ TypeScript compiler tsc, which can run with the help of the tsconfig.json
 
 create /tsconfig.json like:
     {
+        "compileOnSave": false,
         "compilerOptions": {
             "target": "es5",
             "module": "commonjs",
-            "inlineSourceMap": true,
-            "inlineSources": true,
-            "sourceRoot": "src/app",
-            "outDir": "wwwroot/app"
-        }
-    }  
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "lib": [ "es2015", "dom" ],      // Most importent, need "typescript": "^2.2.1"
+            "noImplicitAny": false,
+            "moduleResolution": "node",
+            "sourceRoot": "app",
+            "outDir": "js"
+        },
+        "exclude": [
+            "node_modules",
+            "typings/main",
+            "typings/main.d.ts"
+        ]
+    } 
     run $tsc -watch
     tsc will transfer /src/app/*.ts to /wwwroot/app/*.js
     All client side code should be saved under /wwwroot folder
