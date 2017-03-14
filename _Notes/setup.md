@@ -58,9 +58,4 @@
     }
     
     add gulpfile.js
-    In task "app", 
-## Bower
-
-
-
-## 
+    In task "app", gulp-typescipt complies the ts file to js
