@@ -7,7 +7,7 @@
 ## Add TypeScript config file tsconfig.json to root folder
 TypeScript compiler tsc, which can run with the help of the tsconfig.json
 
-create /tsconfig.json
+create /tsconfig.json like:
     {
         "compilerOptions": {
             "target": "es5",
@@ -23,6 +23,8 @@ create /tsconfig.json
     All client side code should be saved under /wwwroot folder
     The typescript code does not run at client side directly, so we put it in /src folder
 
+    In this project, we run gulp task "app" calling gp_typescript to compile .ts to .js
+    
 ## Add NPM packages for Typing
     core-js NPM package, which is a JavaScript library providing a great set of polyfills for ES6
 
