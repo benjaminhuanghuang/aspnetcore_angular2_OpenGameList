@@ -2,16 +2,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "system",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictNullChecks": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "allowJs": true,
-    "lib": [
-      "es2017", "dom"
-    ],
+    "noImplicitAny": false,
+    "noEmitOnError": false,
+    "removeComments": false,
     "sourceRoot": "Scripts/app",
     "outDir": "wwwroot/app"
   },
