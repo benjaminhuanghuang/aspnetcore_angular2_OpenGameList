@@ -1,12 +1,27 @@
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title>ASP.NET Core + Angular2 Seed</title>
+    <base href="/">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-<body>
-    <h1>This is the static home page for testing...</h1>
-    <a href="/api/values">Test the asp.net core api</a>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Polyfills -->
+    <script src="js/shim.min.js"></script>
+    <script src="js/zone.js"></script>
+    <script src="js/system.src.js"></script>
+    
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <base href ="/">
+    <my-app><!-- content managed by Angular --></my-app>
+  </body>
+
 </html>
