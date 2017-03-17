@@ -25,8 +25,30 @@
 
 ## Bower
     Angular 2 team is pushing their code using NPM rather than Bower, we won't be using it in our project.
-
-
+    Because node_modules folder contains both dev tools and js library, we need add gulp task to copy
+    js library to wwwroot/js folder
+    .bowerrc
+    {
+        "json": "bower.json",
+        "directory": "wwwroot/bower_components",
+        "timeout": 120000,
+        "registry": {
+            "search": [
+            "https://bower.herokuapp.com"
+            ]
+        }
+    }
+    bower.json
+    {
+        "name": "asp.netcore",
+        "private": true,
+        "dependencies": {
+            "bootstrap": "3.3.7",
+            "jquery-validation":"1.16.0",
+            "jquery-validation-unobtrusive":"3.2.6"
+        }
+    }
+    
      
 ## Gulp
     ### Install Gulp package
