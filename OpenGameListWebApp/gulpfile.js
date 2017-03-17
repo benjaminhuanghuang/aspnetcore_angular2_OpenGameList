@@ -27,9 +27,9 @@ var srcPaths = {
 
 var destPaths = {
     app: 'wwwroot/app/',
-    js: 'wwwroot/js/',
-    js_angular: 'wwwroot/js/@angular/',
-    js_rxjs: 'wwwroot/js/rxjs/'
+    js: 'wwwroot/jslib/',
+    js_angular: 'wwwroot/jslib/@angular/',
+    js_rxjs: 'wwwroot/jslib/rxjs/'
 };
 // Compile, minify and create sourcemaps all TypeScript files and place
 // them to wwwroot / app, together with their js.map files.
