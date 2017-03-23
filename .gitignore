@@ -5,6 +5,7 @@
 **/uploads/
 **/node_modules/
 wwwroot/js/
+wwwroot/app
 
 # User-specific files
 *.suo
