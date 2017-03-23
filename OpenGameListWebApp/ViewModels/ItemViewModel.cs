@@ -7,6 +7,8 @@ using Newtonsoft.Json;
 
 namespace OpenGameListWebApp.ViewModels
 {
+    //any field will be serialized into JSON unless being decorated by an explicit 
+    //JsonIgnoreAttribute or NonSerializedAttribute. 
     [JsonObject(MemberSerialization.OptOut)]
     public class ItemViewModel
     {

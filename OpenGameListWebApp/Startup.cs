@@ -27,22 +27,22 @@ namespace StartDate
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-            public void ConfigureServices(IServiceCollection services)
-            {
-                // Create connection
-                // var conn = @"server=127.0.0.1;Database=StartDate;User Id=sa;Password=Ben#1234";
-                // services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(conn));
-        
-                // Add Identity
-                //services.AddIdentity<ApplicationUser, IdentityRole>().
-                //    AddEntityFrameworkStores<ApplicationDBContext>();
-    
-                // Add framework services.
-                services.AddMvc();
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // Create connection
+            // var conn = @"server=127.0.0.1;Database=StartDate;User Id=sa;Password=Ben#1234";
+            // services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(conn));
+
+            // Add Identity
+            //services.AddIdentity<ApplicationUser, IdentityRole>().
+            //    AddEntityFrameworkStores<ApplicationDBContext>();
+
+            // Add framework services.
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
                               ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
@@ -60,9 +60,18 @@ namespace StartDate
             // Configure a rewrite rule to auto-lookup for standard default files such as index.html. 
             app.UseDefaultFiles();
             // Serve static files (html, css, js, images & more).
-            app.UseStaticFiles();
-            //app.UseIdentity();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                OnPrepareResponse = (context) =>
+                {// Disable caching for all static files.
+                                                context.Context.Response.Headers["Cache-Control"] = "no-cache, nostore";
+                context.Context.Response.Headers["Pragma"] = "no-cache";
+                context.Context.Response.Headers["Expires"] = "-1";
+                }
+            });
             app.UseMvcWithDefaultRoute();
+
+            app.UseStaticFiles();
         }
     }
 }

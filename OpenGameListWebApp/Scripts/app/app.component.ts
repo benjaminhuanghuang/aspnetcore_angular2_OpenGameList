@@ -1,6 +1,9 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 @Component({
     selector: "my-app",
-    template: `<h1>OpenGameList</h1><div>Work in progress...</div>`
+    template: `<h1>{{title}}</h1>
+               <item-list></item-list>`
 })
-export class AppComponent { }
+export class AppComponent {
+    title = "Open Game List";
+}
